@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números com JS</title>
+    <style>
+        body {
+            font-size: 12px;
+        }
+        
+        button {
+            padding: 30px;
+            width: 250px;
+        }
+        
+        section {
+            font: 17px Arial;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Trabalhando com Números!</h1>
+    <button onclick="clicar()">Clique aqui para calcular.</button>
+    <section id="resultado">
+        <p>O dobro de 0 é 0 e a metade é 0!</p>
+        <!-- Aqui não precisaria colocar assim, apenas escrever por exemplo: Aqui vai o resultado, e o res.innerHTML já substituiria a mensagem -->
+    </section>
+    <script>
+        window.alert('Seja bem-vindo(a) ao meu site!')
+
+        function clicar() {
+            let num = window.prompt('Digite um número:')
+            let dobro = num * 2
+            let metade = num / 2
+            let res = window.document.querySelector('section#resultado')
+            res.innerHTML = `<p>O dobro de ${num} é ${dobro} e a metade é ${metade}!`
+
+        }
+
+
+        /*Observando a resposta do professor, poderia tirar as variaveis dobro e metade e já fazer isso direto na resposta desta forma:
+        
+        res.innerHTML = `<p>O dobro de ${n1} é ${n1*2} e a metade é ${n1/2}!</p>`
+        
+        mas da forma que fiz também é certo, porém usando mais linhas*/
+    </script>
+
+</body>
+
+</html>

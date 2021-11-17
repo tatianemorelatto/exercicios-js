@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratando dados 2.0</title>
+    <style>
+        body {
+            font-size: 15px;
+        }
+        
+        button {
+            padding: 30px;
+            width: 220px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Trabalhando com dados V2.0</h1>
+
+    <button onclick="clicou()">Clique aqui para começar!</button>
+
+    <section id="resultado">
+        <p>Aqui vai o resultado..</p>
+
+    </section>
+    <script>
+        function clicou() {
+            let nome = window.prompt('Qual é o seu nome?')
+            let res = window.document.querySelector('section#resultado')
+            res.innerHTML = `<p>Olá, <strong>${nome}</strong>! É um prazer te conhecer. &#x1F596`
+
+        }
+    </script>
+</body>
+
+</html>
